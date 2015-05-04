@@ -10,8 +10,8 @@ class App extends React.Component
     <div>
       <h1>App</h1>
       <header>header</header>
-      <Link to="search" activeClassName="ac">search</Link>
-      <Link to="star" activeClassName="ac">star</Link>
+      <Link to="search">search</Link>
+      <Link to="star">star</Link>
       <RouteHandler />
       <footer>footer</footer>
     </div>
