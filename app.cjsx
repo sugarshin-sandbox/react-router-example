@@ -8,10 +8,14 @@ class App extends React.Component
 
   render: ->
     <div>
-      <h1>App</h1>
-      <header>header</header>
-      <Link to="search">search</Link>
-      <Link to="star">star</Link>
+      <header>
+        <h1><Link to="/">App</Link></h1>
+        <span>header</span>
+      </header>
+      <div className="g-menu">
+        <Link to="search">search</Link>
+        <Link to="star">star</Link>
+      </div>
       <RouteHandler />
       <footer>footer</footer>
     </div>

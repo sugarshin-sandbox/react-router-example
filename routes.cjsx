@@ -1,5 +1,5 @@
 React = require 'react'
-{ Route, DefaultRoute, NotFoundRoute } = require 'react-router'
+{ Route, Redirect, NotFoundRoute } = require 'react-router'
 
 App = require './app'
 Search = require './search'
@@ -10,10 +10,11 @@ NotFound = require './notfound.cjsx'
 module.exports =
 routes = (
   <Route path="/" handler={App}>
-    <DefaultRoute handler={Search} />
     <Route name="search" path="search" handler={Search} />
     <Route name="star" path="star" handler={Star} />
     <Route path="shop/:id" handler={Shop} />
+
+    <Redirect from="/" to="search" />
     <NotFoundRoute handler={NotFound} />
   </Route>
 )
